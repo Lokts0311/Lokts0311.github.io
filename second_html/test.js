@@ -1,5 +1,3 @@
-var currentpath = "file:///C:/Users/Jason/Desktop/test%20(2)/";
-
 window.onload = function()
 {
   document.getElementById("yumi").onclick = changephoto;
@@ -7,7 +5,7 @@ window.onload = function()
 
 function changephoto()
 {
-    if(document.getElementById("yumi").src == ( currentpath + "yumi.jpg" ))
+    if(document.getElementById("yumi").src == ( "yumi.jpg" ))
     {
       document.getElementById("yumi").src = "yumi1.jpg";
     } 
