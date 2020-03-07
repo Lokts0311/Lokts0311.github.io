@@ -5,6 +5,7 @@ window.onload = function()
 
 function changephoto()
 {
+    alert(document.getElementById("yumi"));
     if(document.getElementById("yumi").src == ( "yumi.jpg" ))
     {
       document.getElementById("yumi").src = "yumi1.jpg";
