@@ -1,18 +1,16 @@
 window.onload = function()
 {
-  alert(document.getElementById("yumi").src);
   document.getElementById("yumi").onclick = changephoto;
 };
 
 function changephoto()
 {
-    if(document.getElementById("yumi").src == ( "yumi.jpg" ))
+    if(document.getElementById("yumi").src == ( "https://lokts0311.github.io/second_html/yumi.jpg" ))
     {   
-      document.getElementById("yumi").src = "yumi1.jpg";
-      alert(document.getElementById("yumi").src);
+      document.getElementById("yumi").src = "https://lokts0311.github.io/second_html/yumi1.jpg";
     } 
     else
     {
-      document.getElementById("yumi").src ="yumi.jpg";
+      document.getElementById("yumi").src ="https://lokts0311.github.io/second_html/yumi.jpg";
     }
 }
