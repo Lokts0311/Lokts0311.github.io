@@ -13,6 +13,10 @@
         100% { left:0px; top:0px;}*/
         from {left:0%;}
         to {left:80%;}
+      }
+      #bgm {
+        text-align: center;
+        padding: 10px;
       }     
       #yumi {
         display: block;
@@ -63,26 +67,50 @@
     </style>
 </head>
 <body>
-    <h1>My Bgm Songlist</h1>
+    <h1 id="bgm">My Bgm Songlist</h1>
     <img id="chino" src="chino.png" alt="Chino">
     <img id="yumi" src="yumi.jpg" alt="My wife">
     <img id="honoka" src="honoka.jpg" alt="Also My wife">
     <p> This is my wife <strong>YUMI</strong> chan.</p>
     <p>Click here view my <a href="https://www.youtube.com/playlist?list=PLtWkig1OWW1dELB7QxPGMBBt-DFnPN23i" target="_blank">Bgm Songlist</a></p>
-    <script src="test.js"></script> 
     
-    <h1>Favourite Song</h1>
+    <script> 
+        function getData(){
+          //Ajax : XMLHttpRequest
+          var req=new XMLHttpRequest();
+          req.open("get","http://127.0.0.1:8887/favourite_anime.html");
+
+          req.onload=function(){
+            var anime=document.getElementById("anime");
+            anime.innerHTML=this.responseText;
+
+          };     
+
+          req.send();
+        }
+    </script>
+
+
+    <h1 onclick="getData()">Favourit Anime</h1>
+    <div id="anime"></div>
+
     <h2 style="color:blue;">Moment Ring</h2>
+
+    <audio controls muted> 
+      <source src="MOMENT RING.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="lyric">
       <p>聞いてよ　いまの気持ちは</p>
       <p>…そうだなそうだな語りきれない</p>
       <p>出会いからこれまでのことって</p>
       <p>長いようで短かったね</p>
+      <br>
       <p>僕らが一緒に見た　光は銀河の海みたいだ (ね？)</p>
       <p>心がときめいた Fantastic moment</p>
       <p>叶えたい願いが物語を(招く)叶う時がきたのさ</p>
       <p>みんなの声が翼をくれたから　飛べたんだ　飛べたんだ</p>
+      <br>
       <p>無謀な夢から始まって</p>
       <p>奇跡のように全てが繋がって</p>
       <p>どんなるんだろう?</p>
@@ -90,10 +118,20 @@
       <p>これからはもっとよろしくね</p>
       <p>だって離れたりできるはずないんだよ</p>
       <p>思い出だけじゃないからね</p>
-      <p>あたらしい夢が生まれてくると　僕たちが知ってるよ</p>  
-    </div>
-    
+      <p>あたらしい夢が生まれてくると　僕たちが知ってるよ</p> 
+      <br>
+      <p>会いたい　そんな気分なら</p>
+      <p>…そうだねそうだねともに歌おう</p>
+      <p>遠くにいたってかまわない</p>
+      <p>胸の奥でわかりあえてる</p>
+      <br>
+      <p>君にはありがとうと　なんども言ってもまだ足りない (ね！)</p>
+      <p>すてきな経験だった Wonderful moment</p>
+      <p>伝えたい想いが次の扉(開く)次はどこへ行こうか</p>
+      <p>みんなの声でいつまでも飛べるよ　元気いっぱい　元気いっぱい</p> 
+      <p>また飛べるよ！</p> 
+    </div>  
 
-
+    <script src="test.js"></script> 
 </body>
 </html>
